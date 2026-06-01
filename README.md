@@ -343,3 +343,220 @@ Test coverage includes:
 ## 📜 License
 
 MIT License — for evaluation/demonstration purposes only. Not for clinical use.
+
+---
+
+## 📋 Required Deliverables Summary
+
+### 1. LLM Used
+- **Model:** `llama3.2:1b` (via Ollama — runs 100% locally, no API key needed)
+- **Why:** Smallest Llama3 variant that fits in 8GB RAM. Instruction-following is strong enough for grounded RAG responses. Temperature set to 0.0 for maximum factual consistency.
+- **Alternative:** `gemma:2b` for even lower RAM usage, or `llama3:8b` on machines with 16GB+ RAM.
+
+---
+
+### 2. Embedding Model Used
+- **Model:** `sentence-transformers/all-MiniLM-L6-v2`
+- **Dimensions:** 384
+- **Why:** Fast CPU inference (~50ms per chunk), excellent semantic similarity for English healthcare text, runs fully offline after first download, only ~90MB in size.
+- **Library:** `sentence-transformers` (HuggingFace)
+
+---
+
+### 3. Vector Database Used
+- **Database:** ChromaDB (persistent local storage)
+- **Similarity metric:** Cosine similarity
+- **Why:** Zero-config persistent storage, no separate server needed, excellent Python integration, scales to 100K+ chunks, open source.
+- **Storage path:** `./vector_store/` (auto-created on first ingest)
+- **Chunk count:** 64 chunks from 6 documents
+
+---
+
+### 4. Prompting Strategy
+
+The prompt is designed in two parts:
+
+**System Prompt** — Sets strict behavioral rules:
+```
+You are a professional healthcare information assistant.
+Answer using ONLY the provided context. Be concise and direct.
+Do NOT repeat instructions or source labels in your answer.
+If the answer is not in the context, say exactly:
+"I could not find this information in the provided documents."
+Never provide medical diagnoses. Never guess.
+```
+
+**Human Prompt Template** — Injects retrieved context + question:
+```
+Context from healthcare documents:
+{context}
+
+Question: {question}
+
+Using the context above, provide a helpful answer in 2-3 sentences:
+```
+
+**Key design decisions:**
+- Temperature = 0.0 for factual consistency, no creativity
+- `num_predict = 150` to keep answers concise and fast
+- Context block includes source labels so LLM knows which document each chunk came from
+- Explicit refusal instruction prevents hallucination on unknown topics
+
+---
+
+### 5. Agent / Tool Workflow
+
+A lightweight keyword-based intent router classifies every question into one of 4 intents before hitting RAG:
+
+```
+Question
+   │
+   ▼
+Intent Classifier (keyword matching)
+   │
+   ├── EMERGENCY → Instant 911 message, skip RAG entirely
+   │
+   ├── APPOINTMENT_BOOKING → check_available_slots(department, date)
+   │                         Mock tool returns available slots
+   │                         (RAG skipped for booking questions)
+   │
+   ├── MEDICATION_REFILL → check_refill_status(medication_name)
+   │                       Mock tool returns refill eligibility
+   │                       + RAG pulls refill policy context
+   │
+   └── DOCUMENT_QA → Straight to RAG pipeline
+```
+
+**Mock Tools implemented:**
+- `check_available_slots(department, date)` — Simulates a scheduling system, returns available doctor slots for the requested department
+- `check_refill_status(medication_name)` — Simulates pharmacy system, returns refill eligibility and last fill date
+
+**In production** these would connect to real systems like Epic, Cerner, or HL7 FHIR APIs.
+
+---
+
+### 6. Sample Questions and Responses
+
+**Q1: General RAG Query**
+```json
+Request:  {"question": "Can a patient request a medication refill through telehealth?"}
+Response: {
+  "answer": "A patient may request a medication refill through telehealth, but it
+             is not permitted for controlled substances (Schedule II-IV). Refills
+             are limited to medications already prescribed that do not require
+             in-person evaluation. The maximum refill period via telehealth is 90 days.",
+  "confidence": "high",
+  "intent": "medication_refill"
+}
+```
+
+**Q2: Appointment Booking (Agentic Tool)**
+```json
+Request:  {"question": "Book a cardiology appointment for Tuesday"}
+Response: {
+  "answer": "I checked mock appointment availability for Cardiology.
+             Available slots: Tuesday June 02 at 10:30 AM with Dr. Singh,
+             Tuesday June 02 at 2:00 PM with Dr. Sharma...",
+  "intent": "appointment_booking",
+  "elapsed_seconds": 0.001
+}
+```
+
+**Q3: Emergency Detection**
+```json
+Request:  {"question": "I have chest pain and cant breathe"}
+Response: {
+  "answer": "⚠️ This appears to be a medical emergency. Please call 911
+             immediately or go to the nearest emergency room.",
+  "intent": "emergency",
+  "confidence": "high"
+}
+```
+
+**Q4: HIPAA Rights**
+```json
+Request:  {"question": "What are my rights under HIPAA?"}
+Response: {
+  "answer": "Under HIPAA, patients have the right to access their medical
+             records within 30 days, request amendments to inaccurate information,
+             request restrictions on how their PHI is used, and file complaints
+             with the Privacy Officer or HHS without fear of retaliation.",
+  "confidence": "high",
+  "intent": "document_qa"
+}
+```
+
+**Q5: Unknown Question (Anti-Hallucination)**
+```json
+Request:  {"question": "What is the weather today?"}
+Response: {
+  "answer": "I could not find this information in the provided documents.",
+  "confidence": "low",
+  "intent": "document_qa"
+}
+```
+
+---
+
+### 7. Dataset / Source Details
+
+All documents are **100% synthetic** — no real PHI or patient data used anywhere.
+
+| File | Content | Chunks |
+|---|---|---|
+| `telehealth_guidelines.txt` | Telehealth eligibility, refill rules, scheduling, privacy | 9 |
+| `medication_refill_policy.txt` | Refill channels, timeframes, controlled substances | 9 |
+| `patient_discharge_instructions.txt` | Post-care instructions, emergency signs, wound care | 10 |
+| `hipaa_privacy_guidelines.txt` | Patient rights, PHI definition, breach notification | 10 |
+| `appointment_scheduling_policy.txt` | Booking, cancellation, departments, walk-ins | 11 |
+| `insurance_eligibility_faq.txt` | Copay, deductible, prior auth, billing FAQ | 15 |
+
+**Why synthetic?** The assignment explicitly prohibits real PHI. Synthetic documents give full control over content quality and guarantee HIPAA compliance.
+
+**Public sources referenced** (from assignment's suggested list):
+- Document structure modeled after MedlinePlus health topic guidelines
+- HIPAA content aligned with HHS.gov official guidelines
+- Telehealth policies aligned with CMS telehealth coverage rules
+
+---
+
+### 8. API Examples (curl + PowerShell)
+
+**Health Check:**
+```bash
+# curl (Linux/Mac)
+curl http://localhost:8000/health
+
+# PowerShell (Windows)
+Invoke-WebRequest -Uri http://localhost:8000/health -Method GET
+```
+
+**Ingest Documents:**
+```bash
+# curl
+curl -X POST http://localhost:8000/ingest \
+  -H "Content-Type: application/json" \
+  -d '{"reset": true}'
+
+# PowerShell
+Invoke-WebRequest -Uri http://localhost:8000/ingest -Method POST `
+  -ContentType "application/json" -Body '{"reset": true}'
+```
+
+**Ask a Question:**
+```bash
+# curl
+curl -X POST http://localhost:8000/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "What are my rights under HIPAA?"}'
+
+# PowerShell
+Invoke-WebRequest -Uri http://localhost:8000/ask -Method POST `
+  -ContentType "application/json" `
+  -Body '{"question": "What are my rights under HIPAA?"}'
+```
+
+**Interactive UI (no curl needed):**
+```
+http://localhost:8000/docs
+```
