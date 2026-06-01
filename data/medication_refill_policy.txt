@@ -1,0 +1,79 @@
+MEDICATION REFILL POLICY
+Document Version: 3.0 | Effective Date: February 1, 2024
+
+1. PURPOSE
+This policy establishes the procedures and criteria for processing medication
+refill requests to ensure patient safety, regulatory compliance, and efficient
+pharmacy operations.
+
+2. GENERAL REFILL ELIGIBILITY CRITERIA
+A prescription may be refilled if all of the following conditions are met:
+- The original prescription was issued by an authorized provider at this facility.
+- The medication is not expired or discontinued.
+- The patient has not exceeded the authorized number of refills.
+- There are no outstanding lab results or monitoring requirements that must be
+  reviewed before the next refill.
+- The patient has not been flagged for medication non-adherence or misuse.
+
+3. REFILL REQUEST CHANNELS
+Patients may request refills through the following channels:
+a) Patient Portal: Log in to the patient portal and submit a refill request under
+   "Medications." Allow 48–72 business hours for processing.
+b) Mobile App: Use the "Refill Rx" feature. Same processing time applies.
+c) Pharmacy Direct: Some participating pharmacies can electronically request refills
+   on the patient's behalf with prior authorization.
+d) Telehealth Visit: A refill may be reviewed and approved during a scheduled
+   telehealth appointment (see Telehealth Guidelines, Section 4).
+e) In-Person Visit: Patients may request refills during any scheduled appointment.
+f) Phone: Call the pharmacy line at 1-800-MED-REFILL. Not recommended for
+   controlled substances.
+
+4. PROCESSING TIMEFRAMES
+- Non-urgent refills: 48–72 business hours
+- Urgent refills (less than 3-day supply remaining): Same business day if requested
+  before 12 PM; otherwise next business day.
+- After-hours urgent refills: A limited emergency supply of up to 72 hours may be
+  dispensed at the pharmacist's discretion.
+- Controlled substances: Up to 5 business days due to additional verification steps.
+
+5. CONTROLLED SUBSTANCE REFILL POLICY
+- Schedule II medications (e.g., Adderall, OxyContin) cannot be refilled; a new
+  prescription is required each time.
+- Schedule III–IV medications may be refilled up to 5 times within 6 months of
+  the original prescription date.
+- All controlled substance requests require an in-person visit or, in limited
+  cases, a video telehealth visit with identity verification.
+- Random urine drug screening may be required as part of controlled substance
+  management.
+
+6. MEDICATIONS REQUIRING MONITORING BEFORE REFILL
+The following medication classes require recent lab work before a refill is authorized:
+- Warfarin / Coumadin: INR must be on file within the past 30 days.
+- Metformin: Kidney function (eGFR) must be on file within the past 90 days.
+- Lithium: Serum lithium levels must be on file within the past 60 days.
+- ACE Inhibitors: Potassium and creatinine levels within 90 days.
+- Thyroid medications (Levothyroxine): TSH within the past 6 months.
+If lab work is not on file, the refill request will be placed on hold and the patient
+will be notified via the portal or phone.
+
+7. DENIALS AND APPEALS
+Refill requests may be denied for the following reasons:
+- Prescription has expired or reached maximum refill limit.
+- Outstanding required lab work not completed.
+- Insurance prior authorization not obtained.
+- Provider has placed a clinical hold on the medication.
+Patients may appeal a denial by contacting the pharmacy at 1-800-MED-REFILL and
+requesting a clinical review. Appeals are typically resolved within 2 business days.
+
+8. AUTOMATIC REFILL PROGRAM
+- Patients may enroll in the Auto-Refill Program for eligible maintenance medications.
+- Enrollment is available via the patient portal under "Prescription Management."
+- Auto-refill is not available for controlled substances or medications requiring
+  prior monitoring.
+- Patients will be notified by email/SMS 7 days before each auto-refill is processed.
+
+9. INSURANCE AND PRIOR AUTHORIZATION
+- Certain medications require insurance prior authorization (PA) before being dispensed.
+- PA requests are submitted by the provider's office on behalf of the patient.
+- PA processing time: 2–5 business days depending on the insurer.
+- If PA is denied, the provider will discuss alternative medications with the patient.

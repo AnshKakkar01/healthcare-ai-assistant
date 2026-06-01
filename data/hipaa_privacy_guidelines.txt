@@ -1,0 +1,80 @@
+HIPAA PRIVACY AND SECURITY GUIDELINES FOR PATIENTS
+Document Version: 2.2 | Effective Date: January 1, 2024
+
+1. WHAT IS HIPAA?
+The Health Insurance Portability and Accountability Act (HIPAA) is a federal law
+that protects the privacy and security of your health information. It establishes
+national standards for how healthcare providers, health plans, and their business
+associates handle Protected Health Information (PHI).
+
+2. WHAT IS PROTECTED HEALTH INFORMATION (PHI)?
+PHI includes any individually identifiable health information, such as:
+- Your name, address, date of birth, Social Security Number
+- Medical record numbers, account numbers, insurance IDs
+- Diagnosis, treatment history, lab results, prescriptions
+- Billing and payment records related to healthcare
+- Any information that can be used to identify you in the context of healthcare
+
+3. YOUR RIGHTS UNDER HIPAA
+As a patient, you have the following rights:
+a) Right to Access: You can request a copy of your medical records. Requests
+   are fulfilled within 30 days. A reasonable fee may apply for copies.
+b) Right to Amend: You can request corrections to inaccurate or incomplete
+   information in your medical record.
+c) Right to Accounting of Disclosures: You can request a list of entities to whom
+   your PHI was disclosed in the past 6 years.
+d) Right to Restrict Disclosures: You may request restrictions on how your PHI is
+   used or shared for treatment, payment, or operations.
+e) Right to Confidential Communications: You may request that communications
+   be sent to an alternate address or phone number.
+f) Right to Complain: You may file a complaint with our Privacy Officer or with the
+   U.S. Department of Health and Human Services (HHS) without fear of retaliation.
+
+4. HOW WE USE AND SHARE YOUR INFORMATION
+We may use and share your PHI in the following ways without your authorization:
+- Treatment: Sharing with other providers involved in your care.
+- Payment: Submitting claims to your insurance company.
+- Healthcare Operations: Quality assessments, staff training, audits.
+- Public Health Reporting: Reporting communicable diseases to public health authorities.
+- Legal Requirements: Responding to court orders or government investigations.
+
+We will NOT share your PHI for marketing purposes or sell your data without
+your written authorization.
+
+5. AUTHORIZATION REQUIREMENTS
+Your written authorization is required before we may:
+- Share PHI with employers or schools
+- Use your PHI for marketing activities
+- Share psychotherapy notes
+- Use PHI for research not covered by a waiver
+- Share PHI with individuals not listed in your authorized contacts
+
+6. MINIMUM NECESSARY STANDARD
+We are required to disclose only the minimum amount of PHI necessary to
+accomplish the intended purpose of the use or disclosure.
+
+7. BREACH NOTIFICATION
+- In the event of a breach of unsecured PHI, affected patients will be notified
+  within 60 days of discovery.
+- Notification will include: what happened, types of information involved,
+  steps patients should take, and what we are doing to investigate.
+- Large breaches (500+ patients) are reported to HHS and may be reported to media.
+
+8. ELECTRONIC HEALTH RECORDS (EHR) SECURITY
+- All EHR systems are encrypted at rest and in transit using AES-256 and TLS 1.3.
+- Access to EHR is role-based; staff can only access records relevant to their duties.
+- Multi-factor authentication (MFA) is required for all clinical staff.
+- All access to patient records is logged and audited.
+- Portable devices (laptops, tablets) used to access PHI must be encrypted.
+
+9. CONTACTING OUR PRIVACY OFFICER
+For questions, concerns, or to file a complaint:
+- Privacy Officer: privacyofficer@healthcarefacility.org
+- Phone: 1-800-PRIVACY-1
+- Mail: Privacy Officer, 123 Health Way, Medical City, MC 00001
+- HHS Office for Civil Rights: www.hhs.gov/ocr or 1-800-368-1019
+
+10. PENALTIES FOR VIOLATIONS
+HIPAA violations can result in civil penalties ranging from $100 to $50,000 per
+violation, with an annual cap of $1.5 million. Criminal violations may result in
+imprisonment up to 10 years.

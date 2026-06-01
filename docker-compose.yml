@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+
+  # ── Ollama LLM Server ─────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: healthcare_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+
+  # ── Healthcare AI Assistant API ───────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: healthcare_api
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_MODEL=llama3
+      - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+      - VECTOR_STORE_PATH=/app/vector_store
+      - DATA_DIR=/app/data
+      - LOG_LEVEL=INFO
+    volumes:
+      - vector_store_data:/app/vector_store
+    depends_on:
+      ollama:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/health').raise_for_status()"]
+      interval: 30s
+      timeout: 15s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  ollama_models:
+  vector_store_data:

@@ -1,0 +1,88 @@
+APPOINTMENT SCHEDULING POLICY
+Document Version: 1.8 | Effective Date: January 15, 2024
+
+1. PURPOSE
+This policy outlines the procedures for scheduling, rescheduling, and canceling
+patient appointments across all departments at our facility.
+
+2. SCHEDULING CHANNELS
+Patients may book appointments through:
+a) Online Patient Portal: portal.healthcarefacility.org (24/7 availability)
+b) Mobile App: "MyHealth" app (iOS and Android)
+c) Phone: 1-800-APPT-NOW (Monday–Friday, 7 AM–7 PM; Saturday, 8 AM–2 PM)
+d) In-Person: Front desk at any of our clinic locations
+e) Telehealth: Available via the portal or app for eligible conditions
+
+3. APPOINTMENT TYPES AND LEAD TIMES
+- New Patient Appointment: Book at least 5–7 business days in advance.
+- Follow-Up Appointment: Typically available within 2–5 business days.
+- Annual Physical / Wellness Visit: Schedule at least 2–4 weeks in advance.
+- Specialist Referral: Requires a referral from your primary care provider; lead time
+  varies by specialty (1–4 weeks typical).
+- Urgent Same-Day Appointment: Limited slots available; call by 9 AM for same-day.
+- Telehealth Appointments: Available with shorter lead times; often same-day.
+
+4. REQUIRED INFORMATION FOR BOOKING
+When scheduling, please have the following ready:
+- Full legal name and date of birth
+- Insurance card or member ID
+- Reason for visit / symptoms (a brief description)
+- Referring provider name (if applicable)
+- Preferred date, time, and location
+- Contact phone number and email address
+
+5. APPOINTMENT REMINDERS
+- Automated reminders are sent 72 hours and 24 hours before the appointment.
+- Reminders are sent via email, SMS, or phone call based on the patient's preference.
+- Patients can confirm, reschedule, or cancel via the reminder link.
+
+6. CANCELLATION AND RESCHEDULING POLICY
+- Cancellations must be made at least 24 hours before the scheduled appointment.
+- Late cancellations (under 24 hours): A $25 late cancellation fee may be applied.
+- No-shows (failure to appear without notice): A $40 no-show fee may be charged.
+- Fees may be waived in cases of documented medical emergencies.
+- To cancel or reschedule: use the patient portal, app, or call 1-800-APPT-NOW.
+
+7. WALK-IN APPOINTMENTS
+- Walk-in visits are accepted at designated Urgent Care locations only.
+- Walk-in availability is subject to provider capacity on the day of visit.
+- Wait times for walk-ins vary; estimated wait time is displayed at the front desk.
+- Walk-ins are not available for specialist consultations.
+
+8. NEW PATIENT REGISTRATION
+New patients must complete the following before their first appointment:
+- Online registration form (sent via email link after booking)
+- Medical history questionnaire
+- Insurance verification
+- HIPAA consent form
+- Signed patient rights and responsibilities form
+All forms should be completed at least 48 hours before the appointment.
+
+9. REFERRALS AND SPECIALIST APPOINTMENTS
+- Primary Care Provider (PCP) referrals are required by most insurance plans
+  before seeing a specialist.
+- Referrals are valid for 90 days from the issue date unless otherwise noted.
+- The PCP office will submit the referral electronically; the patient will be
+  notified by email/SMS once it is approved.
+- Patients should not book a specialist appointment before the referral is approved.
+
+10. DEPARTMENTS AND AVAILABLE SPECIALTIES
+Available departments for scheduling:
+- Cardiology (Heart Health)
+- Orthopedics (Bone and Joint)
+- Neurology (Brain and Nervous System)
+- Endocrinology (Hormones and Diabetes)
+- Dermatology (Skin)
+- Gastroenterology (Digestive System)
+- Oncology (Cancer Care)
+- Pediatrics (Children's Health, ages 0–17)
+- OB/GYN (Women's Health)
+- Psychiatry and Behavioral Health
+- General Surgery
+- Primary Care / Family Medicine
+
+11. APPOINTMENT NO-SHOW MANAGEMENT
+- Patients with 3 or more no-shows within a 12-month period may be required to
+  prepay for future appointments.
+- Patients with 5 or more no-shows may be placed on a waiting-list-only scheduling
+  tier with limited advance booking options.

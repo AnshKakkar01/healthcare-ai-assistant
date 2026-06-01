@@ -1,0 +1,67 @@
+TELEHEALTH CONSULTATION GUIDELINES
+Document Version: 2.1 | Effective Date: January 1, 2024
+
+1. OVERVIEW
+Telehealth services allow patients to receive medical consultations remotely via
+video, phone, or secure messaging. These guidelines outline the scope, eligibility,
+and procedures for telehealth consultations at our facility.
+
+2. ELIGIBLE CONDITIONS FOR TELEHEALTH
+The following conditions and concerns are appropriate for telehealth visits:
+- Minor illnesses: cold, flu, sore throat, urinary tract infections
+- Follow-up consultations for chronic conditions (diabetes, hypertension, asthma)
+- Mental health and behavioral health counseling
+- Prescription refill reviews (non-controlled medications)
+- Dermatology consultations with photo submission
+- Nutrition and lifestyle counseling
+- Post-surgical follow-ups (non-wound-related)
+- Lab result reviews and discussions
+
+3. CONDITIONS REQUIRING IN-PERSON VISITS
+The following require an in-person evaluation and cannot be handled via telehealth:
+- Chest pain or suspected cardiac emergency
+- Difficulty breathing or respiratory distress
+- Suspected fractures or physical trauma
+- Conditions requiring physical examination (hernia, lumps, etc.)
+- First-time prescriptions for controlled substances
+- Annual physical exams and preventive screenings
+
+4. MEDICATION REFILLS THROUGH TELEHEALTH
+- Medication refill requests may be reviewed during telehealth visits.
+- Refills are permitted only for medications that are already prescribed and
+  do not require an in-person evaluation or physical monitoring.
+- Controlled substances (Schedule II-IV) cannot be prescribed via telehealth
+  under standard protocols.
+- The provider must review the patient's current medication list, last refill date,
+  and any reported side effects before approving the refill.
+- Maximum refill period via telehealth is 90 days.
+
+5. SCHEDULING A TELEHEALTH APPOINTMENT
+- Patients may schedule telehealth appointments via the patient portal, mobile app,
+  or by calling the scheduling hotline at 1-800-HEALTH-1.
+- Appointments are available Monday through Saturday, 7 AM to 9 PM.
+- Same-day telehealth slots may be available for urgent non-emergency concerns.
+- A minimum of 15 minutes should be booked for any telehealth consultation.
+
+6. TECHNOLOGY REQUIREMENTS
+- Patients need a smartphone, tablet, or computer with a camera and microphone.
+- A stable internet connection with at least 5 Mbps upload/download speed is required.
+- Supported platforms: Zoom for Healthcare, Doxy.me, or the facility's patient portal app.
+- Patients should test their setup 10 minutes before the appointment.
+
+7. INSURANCE AND BILLING
+- Most major insurance plans cover telehealth services at the same copay as in-person visits.
+- Medicare and Medicaid telehealth coverage follows current CMS guidelines.
+- Patients are advised to verify telehealth coverage with their insurance prior to the visit.
+- Out-of-pocket cost for uninsured patients: $49 per standard telehealth visit.
+
+8. PRIVACY AND SECURITY
+- All telehealth sessions are conducted on HIPAA-compliant platforms.
+- Sessions are not recorded unless explicit written consent is obtained.
+- Patients should conduct telehealth visits from a private location.
+- Providers are not permitted to conduct telehealth sessions from public spaces.
+
+9. EMERGENCY PROTOCOL
+- If a patient presents with a life-threatening emergency during a telehealth session,
+  the provider will instruct the patient to call 911 immediately.
+- The provider will stay on the call until emergency services are confirmed.
